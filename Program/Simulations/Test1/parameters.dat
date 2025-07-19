@@ -1,0 +1,7 @@
+T 1.0
+eta 1.0
+N 256
+f_pull 1.0
+IC_type r
+meas_freq 1.0
+sim_time 1000.0

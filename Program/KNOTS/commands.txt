@@ -1,0 +1,16 @@
+./simulate-polymer.bin Simulations/Test4
+vmd -e visualize-polymer.tcl -args Simulations/Test4/initial-condition.gro Simulations/Test4/trajectory-file-0.trr
+vmd -e visualize-polymer.tcl -args Simulations/Test4/initial-condition.gro Simulations/Test4/trajectory-file-1.trr
+vmd -e visualize-polymer.tcl -args Simulations/Test4/initial-condition.gro Simulations/Test4/trajectory-file-2.trr
+vmd -e visualize-polymer.tcl -args Simulations/Test4/initial-condition.gro Simulations/Test4/trajectory-file-3.trr
+vmd -e visualize-polymer.tcl -args Simulations/Test4/initial-condition.gro Simulations/Test4/trajectory-file-4.trr
+vmd -e visualize-polymer.tcl -args Simulations/Test4/initial-condition.gro Simulations/Test4/trajectory-file-5.trr
+vmd -e visualize-polymer.tcl -args Simulations/Test4/initial-condition.gro Simulations/Test4/trajectory-file-6.trr
+vmd -e visualize-polymer.tcl -args Simulations/Test4/initial-condition.gro Simulations/Test4/trajectory-file-7.trr
+vmd -e visualize-polymer.tcl -args Simulations/Test4/initial-condition.gro Simulations/Test4/trajectory-file-8.trr
+vmd -e visualize-polymer.tcl -args Simulations/Test4/initial-condition.gro Simulations/Test4/trajectory-file-10.trr
+./analyse-polymer.bin Simulations/Test4
+chmod +x run_simulation.sh
+./run_simulation.sh
+///////////////////////////////////////////
+./knots-generator.bin Simulations/Test4

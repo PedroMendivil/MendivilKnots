@@ -1,0 +1,11 @@
+#Analysis of 6 files from Simulations/Test4.
+#        N         T       eta    f_pull
+       400    0.0000    0.5000    4.0000
+#Warning: Not enough data to analyse Rg2.
+#Rg2: n_term = 1244, n_blocks = 2
+#         <Rg2>       SEM(Rg2)       Var(Rg2)
+    8345.055885    1499.077296 5133205.544119
+#Warning: Not enough data to analyse nce.
+#nce: n_term = 1244, n_blocks = 2
+#         <nce>       SEM(nce)       Var(nce)
+    0.853743235    0.057800225    0.006680715

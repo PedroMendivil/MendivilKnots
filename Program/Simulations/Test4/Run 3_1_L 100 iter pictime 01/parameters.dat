@@ -1,0 +1,20 @@
+T    0.0
+eta  .5
+N    400
+f_pull  4.0
+IC_type k
+meas_freq  0.1
+sim_time   3000.0
+file_to_load  K_4_1_Cantarella.gro
+// This file (file_to_load.gro) must be in the 
+// folder where are writen files .gro and .trr
+
+// T is Kelvin temperature
+// eta is the viscosity
+// The value N (number of particules) only works well with random_IC (IC_type = r)
+// f_pull is pull forces on ends of polymer (force -x and force +x)
+// IC_type: r => random, k => knot
+// meas_freq : number of recorded pictures: 1 for each iteraction, 0.5 each 2 etc
+// sim_time : number of iteractions
+
+

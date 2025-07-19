@@ -1,0 +1,4 @@
+PERMISOS PARA COPIAR LO QUE QUIERA DONDE ME DE LA GANA
+
+chmod +x nombre_del_archivo.xxx  // Este comando añade los permisos de ejecución al archivo.
+ // El archivo que al copiarlo de otra carpeta no corre porque no tiene permisos se le otorgan con chmod +x... desde el terminal(consola).			

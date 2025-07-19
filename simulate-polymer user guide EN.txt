@@ -1,0 +1,59 @@
+INSTRUCTIONS FOR USING THE PROGRAM simulate-polymer.bin
+
+Install Visual Studio Code on LINUX.
+
+Install the VMD molecular dynamics visualization program on LINUX.
+
+Copy the entire Program directory to your computer.
+
+Look at the first line of the commands.txt text file: ./simulate-polymer.bin Simulations/Test4
+
+To launch the program, type the following on the command line: ./simulate-polymer.bin Simulations/Test4
+
+To execute without errors:
+
+If you enter a different number of monomers (N) in the monomer positions file than the one in the parameters.dat file: error
+
+If the positions file has monomers that are too close together: error (approximate distance between consecutive monomers: on the order of 1)
+
+If the positions file has monomers that are too far apart: the molecule is split.
+
+If the position file name does not match any xxxxx.gro file in the Program directory: error.
+
+If the positions file is not sorted correctly: error
+
+
+THE ENTIRE EXECUTION DEPENDS ON WHAT IS MODIFIED IN THE parameters.dat FILE:
+
+Example of a parameters.dat file: (modify ONLY the numbers in the first 8 lines; subsequent comments can be modified or deleted)
+
+T 0.0
+eta .5
+N 26
+f_pull 2
+IC_type k
+meas_freq 1
+sim_time 50
+file_to_load K_3_L_tzero.gro
+// This file (file_to_load.gro) must be in the
+// folder where the .gro and .trr files are written
+
+// T is Kelvin temperature (better T=0.0, but you are free to change it…)
+// eta is the viscosity (a little bit of viscosity improves the behavior of the program)
+// The value N (number of particles) 
+// f_pull is pulling forces on the ends of the polymer (force -x on the first monomer, and force +x on the last monomer).
+// IC_type: r => random, k => knot
+// meas_freq: number of recorded pictures: 1 for each iteration, 0.5 for each 2, etc.
+// sim_time: number of iterations
+
+The program is designed using the directive function of the parameters.dat file. It's not an intuitive interface, but that's how it was programmed. Sorry.
+
+To visualize the polymer's motion, use the VMD program by running something like this on the command line (see commands.txt file):
+
+vmd -e visualize-polymer.tcl -args Simulations/Test4/initial-condition.gro Simulations/Test4/trajectory-file-0.trr (this will display the iterations you specified in the sim_time parameter).
+
+To see more iterations, you can run simulate-polymer.bin again, and to view them, use the same command ending in -file-1.trr, and so on.
+
+Good luck.
+
+

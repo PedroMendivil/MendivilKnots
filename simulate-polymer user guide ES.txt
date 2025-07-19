@@ -1,0 +1,56 @@
+INSTRUCCIONES PARA USAR EL PROGRAMA: simulate-polymer.bin
+
+Instale Visual Studio Code en Linux.
+
+Instale el programa de visualización de dinámica molecular VMD en Linux.
+
+Copie todo el directorio del programa a su equipo.
+
+Observe la primera línea del archivo de texto commands.txt: ./simulate-polymer.bin Simulations/Test4
+
+Para iniciar el programa, escriba lo siguiente en la línea de comandos: ./simulate-polymer.bin Simulations/Test4
+
+Para ejecutarlo sin errores:
+
+Si introduce un número de monómeros N diferente en el archivo de posiciones de monómeros que el del archivo parameters.dat: error.
+
+Si el archivo de posiciones contiene monómeros demasiado próximos entre sí: error (distancia aproximada entre monómeros consecutivos: del orden de 1).
+
+Si el archivo de posiciones contiene monómeros demasiado separados: la molécula se divide.
+
+Si el nombre del archivo de posiciones no coincide con ningún archivo xxxxx.gro del directorio del programa: error.
+
+Si el archivo de posiciones no está ordenado correctamente: error
+
+TODA LA EJECUCIÓN DEPENDE DE LO QUE SE MODIFIQUE EN EL ARCHIVO parameters.dat:
+
+Ejemplo de un archivo de parámetros: (modifique SOLO los números en las primeras 8 líneas; los comentarios posteriores se pueden modificar o eliminar)
+
+T 0.0
+eta 0.5
+N 26
+f_pull 1
+IC_type k
+meas_freq 1
+sim_time 50
+file_to_load K_3_L_tzero.gro
+// Este archivo (file_to_load.gro) debe estar en la carpeta donde se escriben los archivos .gro y .trr.
+
+// T es la temperatura Kelvin (mejor T=0.0, pero puede cambiarla libremente…)
+// eta es la viscosidad (un poco de viscosidad mejora el comportamiento del programa)
+// El valor N (número de partículas)
+// f_pull son las fuerzas de tracción en los extremos del polímero (fuerza -x en el primer monómero y fuerza +x en el último).
+// IC_type: r => aleatorio, k => nudo
+// meas_freq: número de imágenes grabadas: 1 por cada iteración, 0,5 por cada 2, etc.
+// sim_time: número de iteraciones
+
+El programa está diseñado utilizando la función directiva del archivo parameters.dat. No es una interfaz intuitiva, pero así se programó. Lo sentimos.
+
+Para visualizar el movimiento del polímero use el programa VMD lanzando en la línea de comando del mismo (ver fichero commands.txt) algo del estilo de:
+
+vmd -e visualize-polymer.tcl -args Simulations/Test4/initial-condition.gro Simulations/Test4/trajectory-file-0.trr (con esto visualizará las iteraciones que haya indicado en el parámetro sim_time).
+
+Para ver otras tantas iteraciones más puede volver a lanzar simulate-polymer.bin otra vez y para visualizarlas deberá usar el mismo comando pero terminado en -file-1.trr y así sucesivamente.
+
+
+¡Buena suerte!
