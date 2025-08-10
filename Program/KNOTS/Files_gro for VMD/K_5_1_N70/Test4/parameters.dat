@@ -1,17 +1,17 @@
-T    0.0
-eta  10.0
-N    26
+T    1.0
+eta  1.0
+N    70
 f_pull  1.0
 IC_type k
-meas_freq  1
-sim_time   10.0
-file_to_load  K_3_R_N26_tzero.gro
+meas_freq  1.0
+sim_time   275.0
+file_to_load  K_5_1_N70.gro
 // Este archivo (file_to_load) debe estar en la 
 // carpeta donde se escriben los .gro y los .trr
 
 // T es la temperatura en grados Kelvin
 // eta es la viscosidad
-// El valor N (numero de particulas) solo es bueno con random_IC (IC_type = r)
+// El valor N debe coincidir en el .gro y en parameters.dat
 // f_pull es la fuerza que estira de los extremos del polímero (-x y +x)
 // IC_type: r => random, k => knot
 // meas_freq : número de imágenes almacenadas: 1 es cada iteración, 0,5 cada 2 etc

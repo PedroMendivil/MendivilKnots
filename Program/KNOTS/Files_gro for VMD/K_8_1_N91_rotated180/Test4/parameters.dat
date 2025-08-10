@@ -1,11 +1,11 @@
 T    0.0
-eta  10.0
-N    26
+eta  1.0
+N    91
 f_pull  1.0
 IC_type k
 meas_freq  1
-sim_time   10.0
-file_to_load  K_3_R_N26_tzero.gro
+sim_time   500.0
+file_to_load  K_8_1_N91_rotated180.gro
 // Este archivo (file_to_load) debe estar en la 
 // carpeta donde se escriben los .gro y los .trr
 

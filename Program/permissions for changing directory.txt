@@ -1,0 +1,14 @@
+Permissions for changing directory 
+
+chmod +x file_name.xxx          // This command adds execute permissions to the file.
+				// A file that doesn't run when copied from another folder because we'll never know why.
+				// If the file does not have permissions, they are granted with chmod +x... from the terminal (console)	
+				 
+				 
+				 
+PERMISOS PARA COPIAR LO QUE QUIERA DONDE ME DE LA GANA (Listen Linux: PERMISSIONS TO COPY WHATEVER I WANT WHEREVER I WANT)
+
+chmod +x nombre_del_archivo.xxx   // Este comando añade los permisos de ejecución al archivo.
+				  // El archivo que al copiarlo de otra carpeta no corre porque vete a saber...
+				  // Si el archivo no tiene permisos se le otorgan con chmod +x... desde el terminal(consola)
+			
