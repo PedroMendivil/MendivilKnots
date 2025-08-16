@@ -13,4 +13,4 @@ vmd -e visualize-polymer.tcl -args Simulations/Test4/initial-condition.gro Simul
 chmod +x run_simulation.sh
 ./run_simulation.sh
 ///////////////////////////////////////////
-./knots-generator.bin Simulations/Test4
+
