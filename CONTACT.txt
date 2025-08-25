@@ -2,5 +2,5 @@
 
 
 
-# For questions or collaboration, reach out to info @sycon.es or open an issue on GitHub.
+# For questions or collaboration, reach out to pedro.mendivil@sycon.es or open an issue on GitHub.
 
